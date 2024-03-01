@@ -8,7 +8,8 @@ const items = [
   { name: 'Julie', img: 'IMG/case/Julie.png' },
   { name: 'Louis', img: 'IMG/case/Louis.png' },
   { name: 'Tetiana', img: 'IMG/case/Tetiana.png' },
-  { name: 'Denys', img: 'IMG/case/Denys.png' }
+  { name: 'Denys', img: 'IMG/case/Denys.png' },
+  { name: 'Marcel', img: 'IMG/case/Marcel.png' }
 ];
 
 const questions = [
