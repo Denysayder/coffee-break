@@ -171,5 +171,14 @@ function start() {
     questionContainer.innerHTML = `<p class="question">Question for ${itemName}</p>`;
     randomQuestionBlock.style.display = 'block';
     displayRandomQuestion();
+
+    // Отключаем тогл для выбранного элемента
+    const toggleItems = document.querySelectorAll('.toggle-item');
+    toggleItems.forEach(toggleItem => {
+      const nameElement = toggleItem.querySelector('.name');
+      if (nameElement.textContent === itemName) {
+        toggleItem.querySelector('.toggle').checked = false;
+      }
+    });
   }, { once: true });
 }
