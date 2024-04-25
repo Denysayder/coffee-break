@@ -96,9 +96,18 @@ const questions = [
   // "What inspired you to pursue the career you have today?",
 ];
 
-function getItem() {
-  const randomIndex = Math.floor(Math.random() * items.length);
-  return items[randomIndex];
+function getSelectedItems() {
+  const selectedItems = [];
+  const toggleElements = document.querySelectorAll('.toggle-item input[type="checkbox"]:checked');
+
+  for (const toggleElement of toggleElements) {
+    const name = toggleElement.parentNode.querySelector('.name').textContent;
+    const item = items.find(item => item.name === name);
+    if (item) {
+      selectedItems.push(item);
+    }
+  }
+  return selectedItems;
 }
 
 function generateItems() {
@@ -106,8 +115,13 @@ function generateItems() {
   document.querySelector('.scope').innerHTML = `<ul class="list"></ul>`;
   const list = document.querySelector('.list');
 
+  const selectedItems = getSelectedItems();
+
   for (let i = 0; i < cells; i++) {
-    const item = getItem();
+    if (selectedItems.length === 0) break; // Exit loop if no items are selected
+
+    const randomIndex = Math.floor(Math.random() * selectedItems.length);
+    const item = selectedItems[randomIndex];
     const li = document.createElement('li');
     li.setAttribute('data-item', JSON.stringify(item));
     li.classList.add('list__item');
