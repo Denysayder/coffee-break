@@ -118,7 +118,7 @@ function generateItems() {
   const selectedItems = getSelectedItems();
 
   for (let i = 0; i < cells; i++) {
-    if (selectedItems.length === 0) break; // Exit loop if no items are selected
+    if (selectedItems.length === 0) break;
 
     const randomIndex = Math.floor(Math.random() * selectedItems.length);
     const item = selectedItems[randomIndex];
@@ -129,6 +129,17 @@ function generateItems() {
     list.append(li);
   }
 }
+
+function handleCheckboxChange() {
+  generateItems();
+}
+
+document.querySelectorAll('.toggle-item input[type="checkbox"]').forEach(checkbox => {
+  checkbox.addEventListener('change', handleCheckboxChange);
+});
+
+generateItems();
+
 
 function displayRandomQuestion() {
   const randomIndex = Math.floor(Math.random() * questions.length);
@@ -172,7 +183,6 @@ function start() {
     randomQuestionBlock.style.display = 'block';
     displayRandomQuestion();
 
-    // Отключаем тогл для выбранного элемента
     const toggleItems = document.querySelectorAll('.toggle-item');
     toggleItems.forEach(toggleItem => {
       const nameElement = toggleItem.querySelector('.name');

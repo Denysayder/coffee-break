@@ -6,10 +6,6 @@
   }
 
   .wrapper {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     min-height: 100vh;
     background: #13161a;
     color: white;
@@ -105,9 +101,8 @@
   }
   .app .start:hover {
     opacity: 0.8;
-  }/*# sourceMappingURL=style.css.map */
+  }
 
-  /* Add styles for the question block */
 .question-block {
   margin-top: 20px;
   text-align: center;
@@ -118,7 +113,6 @@
   font-size: 18px;
 }
 
-/* Existing styles remain unchanged */
 @font-face {
     font-family: myFont;
     src: url(./Retrahaus.ttf);
@@ -150,8 +144,8 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 31px; /* измененная ширина */
-  height: 16px; /* измененная высота */
+  width: 31px;
+  height: 16px;
   display: inline-block;
   position: relative;
   border-radius: 50px;
@@ -168,21 +162,21 @@
   display: block;
   position: absolute;
   z-index: 2;
-  width: 14px; /* измененная ширина */
-  height: 14px; /* измененная высота */
+  width: 14px;
+  height: 14px;
   background: #fff;
-  left: 1px; /* измененный отступ слева */
-  top: 1px; /* измененный отступ сверху */
+  left: 1px;
+  top: 1px;
   border-radius: 50%;
   font: 5px/14px Helvetica;
   text-transform: uppercase;
   font-weight: bold;
-  text-indent: -11px; /* измененный отступ */
-  word-spacing: 19px; /* измененный интервал между словами */
+  text-indent: -11px;
+  word-spacing: 19px;
   color: #fff;
-  text-shadow: -0.5px -0.5px rgba(0,0,0,0.15); /* измененный тень текста */
+  text-shadow: -0.5px -0.5px rgba(0,0,0,0.15);
   white-space: nowrap;
-  box-shadow: 0 0.5px 1px rgba(0,0,0,0.2); /* измененный боковой тень */
+  box-shadow: 0 0.5px 1px rgba(0,0,0,0.2);
   transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
 }
 
@@ -191,7 +185,7 @@
 }
 
 .toggle:checked:before {
-  left: 16px; /* измененное положение при выборе */
+  left: 16px;
 }
 
 .container{
